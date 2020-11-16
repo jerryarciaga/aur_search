@@ -10,3 +10,6 @@ class AUR_Package:
 
     def __str__(self):
         return f'{self.name} <{self.link}>\n\t{self.desc}'
+
+if __name__ == '__main__':
+    pass
