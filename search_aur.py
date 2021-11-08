@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import sys
 import requests
 import json
@@ -19,10 +21,10 @@ if __name__ == '__main__':
             'by': 'name',
             'arg': sys.argv[1],
         }
-        
+
         # Look up AUR Package
         aur_search = requests.get(url=url, headers=headers, params=params)
-        
+
         # Load each result to AUR_Package class
         for result in json.loads(aur_search.text)['results']:
             package = AUR_Package(
